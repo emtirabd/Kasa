@@ -1,10 +1,19 @@
-import React from 'react'
+// import React from 'react'
 import ReactDOM from 'react-dom/client'
-import App from './components/App.jsx'
-import './sass/app.scss'
+import {BrowserRouter , Routes, Route} from "react-router-dom"
+import './sass/home.scss'
+import './sass/navbar.scss'
+import Navbar from './components/Navbar.jsx'
+import Home from '../pages/home.jsx'
+import About from '../pages/about.jsx'
 
 ReactDOM.createRoot(document.getElementById('root')).render(
-  <React.StrictMode>
-    <App />
-  </React.StrictMode>,
+     <BrowserRouter>
+      <Navbar />
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/about" element={<About />} />
+      </Routes>
+    </BrowserRouter>
+  
 )
