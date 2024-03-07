@@ -1,9 +1,11 @@
-
+import bannerAbout from "../src/assets/bannerAbout.png"
 
 const About = () => {
     return (
-        <div>
-            <h1>Voici la page A propos</h1>
+        <div className="about">
+            <div className="banner">
+                <img src={bannerAbout} alt="Image de paysage montagneux" />
+            </div>
         </div>
     );
 };
