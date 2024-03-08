@@ -7,5 +7,6 @@
     align-items: center;
     gap: 10px;
     padding-top: 30px;
-    // faire en sorte que le footer prenne toute la largeur
+    margin-left: -50px; /* Réinitialise la marge de gauche et droite pour le footer */
+    margin-right: -50px;
 }
