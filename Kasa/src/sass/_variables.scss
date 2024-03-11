@@ -1,0 +1,10 @@
+
+@mixin render_desktop {
+    max-width: 1440px;
+    margin: 0 auto;
+    padding: 0 50px;
+  }
+  
+  @mixin render_mobile {
+    padding: 0 20px;
+  }

@@ -1,5 +1,10 @@
-.home{
+@import "variables";
+
+.home {
+    @include render_desktop;
+
     .gallery {
+
         display: grid;
         grid-template-columns: repeat(3, 1fr); 
         gap: 35px;

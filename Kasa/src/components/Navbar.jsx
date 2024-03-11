@@ -8,12 +8,17 @@ const Navbar = () => {
         <img src={logoKasa} alt="Logo Kasa" />
         <nav>
             <ul>
-                <NavLink to ="/" className={({isActive}) => (isActive ? "underline" : "")}>
-                <li>Accueil</li>
-                </NavLink>
-                <NavLink to ="/about" className={({isActive}) => (isActive ? "underline" : "")}>
-                <li>A propos</li>
-                </NavLink>
+
+                <li>
+                    <NavLink to ="/" className={({isActive}) => (isActive ? "underline" : "")}>
+                        Accueil
+                    </NavLink>
+                </li>
+                <li>
+                    <NavLink to ="/about" className={({isActive}) => (isActive ? "underline" : "")}>
+                        A propos
+                    </NavLink>
+                </li>
             </ul>
         </nav>
        </div>

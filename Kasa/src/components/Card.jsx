@@ -1,18 +1,17 @@
 import PropTypes from "prop-types";
 
-const Card = ({Appartement}) => {
+const Card = ({appartement}) => {
     return (
-        Appartement.map((appartement)=>(
-            <div className="card" key={appartement.id}>
+
+        <div className="card" key={appartement.id}>
             <img src={appartement.cover} alt={appartement.title} />
             <h2>{appartement.title}</h2>
-            </div>
-        ))
+        </div>
     );
 };
 
 Card.propTypes = {
-    Appartement: PropTypes.array.isRequired
+    appartement: PropTypes.object.isRequired,
 }
 
 export default Card;
