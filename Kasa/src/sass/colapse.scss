@@ -1,0 +1,27 @@
+.colapses {
+    display: flex;
+    flex-direction: column;
+    max-width: 1023px;
+    margin: 0 auto;
+    h2 {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        color: white;
+        background-color: #ff6060;
+        padding: 10px;
+        border-radius: 5px;
+    }
+    p {
+        background-color: #f6f6f6;
+        padding: 15px;
+        max-height: 0;
+        transition: max-height 0.3s ease;
+        &_show {
+            max-height: 500px;
+        }
+        &_hide {
+            max-height: 0;
+        }
+      }
+}
