@@ -19,10 +19,28 @@ const Apart = () => {
                 }
                 )}
                 </div> */}
-            <h1>voici l'appartement avec l'id {id}</h1>
-            <p>voici le titre de l appart {appartement.title}</p>
-        
+             <div className="apart-content">
+          <div className="apart-infos">
+            <div>
+              <h2>{appartement.title}</h2>
+              <p>{appartement.location}</p>
+              <div className="tag">
+                <ul>
+                  {appartement.tags.map((tags, index) => (
+                    <li key={index}>{tags}</li>
+                  ))}
+                </ul>
+              </div>
+            </div>
+            <div className="profil">
+              <div className="profil-host">
+                <p>{appartement.host.name}</p>
+                <img src={appartement.host.picture} alt="Profil de l'hôte" />
+              </div>
+            </div>
+          </div>
         </div>
+      </div>
     );
 };
 
