@@ -1,7 +1,7 @@
 import { useState } from 'react';
-import PropTypes from "prop-types";
+import chevron from '../assets/chevron.svg';
 
-const Colapse = ({info}) => {
+const Colapse = ({title, content, id}) => {
 
     const [showContent, setShowContent] = useState(false);
 
@@ -10,17 +10,15 @@ const Colapse = ({info}) => {
         console.log("toggleContent function called");
     };
 
+    let toogleAnimation = showContent ? '' : 'close'
+
     return (
 
-        <div className="colapse" key={info.id}>
-            <h2 onClick={toggleContent}  className={showContent ? "active" : ""}>{info.title}</h2>
-            <p className={showContent ? "show" : "hide"}>{info.content}</p>
+        <div className= {`collapse__content`} key={id}>
+            <h2 onClick={toggleContent}>{title}  <img src={chevron} className={`icon ${toogleAnimation} `}/></h2>
+            <div className= {`${toogleAnimation}`} >{content}</div>
         </div>
     );
 };
-
-Colapse.propTypes = {
-    info: PropTypes.object.isRequired,
-}
 
 export default Colapse;

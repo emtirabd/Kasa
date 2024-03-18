@@ -3,8 +3,12 @@
     flex-direction: column;
     max-width: 1023px;
     margin: 0 auto;
-    h2 {
-        
+  
+    .collapse__content {
+      overflow-y: hidden;
+      margin-bottom: 20px;
+  
+      h2 {
         display: flex;
         align-items: center;
         justify-content: space-between;
@@ -12,17 +16,41 @@
         background-color: #ff6060;
         padding: 10px;
         border-radius: 5px;
-    }
-    p {
-        background-color: #f6f6f6;
-        padding: 15px;
-        max-height: 0;
-        transition: max-height 0.3s ease;
-        &_show {
-            max-height: 500px;
-        }
-        &_hide {
-            max-height: 0;
+        z-index: 30;
+        position: relative;
+        margin: 0;
+  
+        .icon {
+          width: 20px;
+          fill: white;
+          transition: .2s ease-in all;
+          transform: rotate(-180deg);
+          cursor: pointer;
+  
+          &.close {
+            transform: rotate(0);
+          }
         }
       }
-}
+  
+      div {
+        background-color: #f6f6f6;
+        color: #000;
+        margin: 0;
+        padding: 15px;
+        overflow-y: hidden;
+        max-height: 500px; 
+        transform: translateY(0);
+        transition-property: max-height, transform;
+        transition-duration: .3s; 
+        
+        line-height: 1.5;
+  
+        &.close {
+          padding: 0;
+          transform: translateY(-40px);
+          max-height: 0;
+        }
+      }
+    }
+  }
