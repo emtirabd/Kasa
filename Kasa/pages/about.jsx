@@ -4,7 +4,7 @@ import infos from "../src/data/colapse.json";
 
 const About = () => {
     return (
-        <div className="about">
+        <div className="home">
             <div className="banner">
                 <img src={bannerAbout} alt="Image de paysage montagneux" />
             </div>

@@ -7,15 +7,14 @@ const Colapse = ({title, content, id}) => {
 
     const toggleContent = () => {
         setShowContent(!showContent);
-        console.log("toggleContent function called");
     };
 
     let toogleAnimation = showContent ? '' : 'close'
 
     return (
 
-        <div className= {`collapse__content`} key={id}>
-            <h2 onClick={toggleContent}>{title}  <img src={chevron} className={`icon ${toogleAnimation} `}/></h2>
+        <div className= {`colapse__content`} key={id}>
+            <h2 >{title}  <img onClick={toggleContent} src={chevron} className={`icon ${toogleAnimation} `}/></h2>
             <div className= {`${toogleAnimation}`} >{content}</div>
         </div>
     );
