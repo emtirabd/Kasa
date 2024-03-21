@@ -1,6 +1,7 @@
 import {useParams} from "react-router-dom";
 import appartements from "../src/data/logements.json";
 import Colapse from "../src/components/Colapse.jsx";
+import ApartmentRating from "../src/components/Rating.jsx";
 
 const findAppartID = (id) => {
     return appartements.find((appartement) => appartement.id === id);
@@ -15,7 +16,7 @@ const Apart = () => {
             
            </div>
             <div className="apart-content">
-                <div className="apart-infos">
+                
                     <div className="apart-titles">
                         <div className="location">
                         <h2>{appartement.title}</h2>
@@ -31,22 +32,27 @@ const Apart = () => {
                         <div className="profil-host">
                             <p>{appartement.host.name}</p>
                             <img src={appartement.host.picture} alt="Profil de l'hôte"/>
+                            <ApartmentRating rating={appartement.rating}/>
                         </div>
                     </div>
                    
                     <div className="colapses colapses-about">
+                        <div className ="colapse-description">
                         <Colapse id={"1"} title={'Description'} content={appartement.description} />
-                        <Colapse id={"1"} title={'Equipements'} content={
+                        </div>
+                        <div className ="colapse-equipment">
+                        <Colapse className ="colapse-equipment"  id={"1"} title={'Equipements'} content={
                             <ul>
                                 {appartement.equipments.map((equipment, index) => (
                                     <li key={index}>{equipment}</li>
-                                ))}
+                                    ))}
                             </ul>
                         } />
+                        </div>
                     </div>
                 </div>
             </div>
-        </div>
+        
     );
 };
 
