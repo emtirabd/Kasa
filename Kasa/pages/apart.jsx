@@ -30,8 +30,10 @@ const Apart = () => {
                         </div>
                         </div>
                         <div className="profil-host">
+                            <div className="host-infos">
                             <p>{appartement.host.name}</p>
                             <img src={appartement.host.picture} alt="Profil de l'hôte"/>
+                            </div>
                             <ApartmentRating rating={appartement.rating}/>
                         </div>
                     </div>
