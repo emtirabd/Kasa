@@ -3,9 +3,11 @@
     height: 450px;
     max-width: 1440px;
     margin: 0 auto;
+    border-radius: 25px;
 }
 
 .apart {
+    padding: 0 50px;
   &-content {
     max-width: 1440px;
     margin: 0 auto;
@@ -39,12 +41,19 @@
   &-titles {
     display: flex;
     justify-content: space-between;
-    margin-top: 20px;
-    h2 {
-      color: #ff6060;
-      font-size: 36px;
-      margin: 0;
+    margin-top: 30px;
+    .location {
+        h2 {
+            color: #ff6060;
+            font-size: 36px;
+            margin: 0;
+            font-weight: lighter;
+        }
+        p {
+            margin: 5px 0 20px 0px;
+        }
     }
+    
     .tag {
       ul {
         list-style: none;
