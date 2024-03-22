@@ -76,5 +76,32 @@
       font-size: 19px;
     }
   }
+
+  .apart {
+    .carousel {
+      max-height: 255px;
+    }
+    &-content {
+      display: flex;
+      flex-direction: column;
+      .colapses-about {
+        display: flex;
+        flex-direction: column;
+      }
+    }
+    &-titles {
+      display: flex;
+      flex-direction: column;
+      .profil-host {
+        display: flex;
+        flex-direction: row;
+      }
+      .location {
+        h2 {
+          font-size: 20px;
+        }
+      }
+    }
+  }
 }
 
