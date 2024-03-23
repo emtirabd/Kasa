@@ -78,6 +78,7 @@
   }
 
   .apart {
+    padding: 0 20px;
     .carousel {
       max-height: 255px;
     }
@@ -87,18 +88,36 @@
       .colapses-about {
         display: flex;
         flex-direction: column;
+        .colapse-description, .colapse-equipment {
+          width: 100%;
+
+        }
       }
     }
     &-titles {
+      margin: 0;
       display: flex;
       flex-direction: column;
       .profil-host {
         display: flex;
-        flex-direction: row;
+        flex-direction: row-reverse;
+        justify-content: space-between;
+        align-items: center;
       }
       .location {
         h2 {
           font-size: 20px;
+          line-height: 1.5;
+          padding: 10px 0;
+        }
+        .tag {
+          ul {
+            li {
+              font-size: 11px;
+              height: 25px;
+              padding: 0 10px;
+            }
+          }
         }
       }
     }

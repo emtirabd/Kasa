@@ -2,6 +2,7 @@ import {useParams} from "react-router-dom";
 import appartements from "../src/data/logements.json";
 import Colapse from "../src/components/Colapse.jsx";
 import ApartmentRating from "../src/components/Rating.jsx";
+import Error from '../pages/error.jsx'
 
 const findAppartID = (id) => {
     return appartements.find((appartement) => appartement.id === id);
@@ -10,6 +11,11 @@ const findAppartID = (id) => {
 const Apart = () => {
     const {id} = useParams();
     const appartement = findAppartID(id);
+
+    if(appartement === undefined) {
+        return <Error />
+    }
+
     return (
         <div className="apart">
            <div className="carousel">
