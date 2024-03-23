@@ -3,6 +3,7 @@ import appartements from "../src/data/logements.json";
 import Colapse from "../src/components/Colapse.jsx";
 import ApartmentRating from "../src/components/Rating.jsx";
 import Error from '../pages/error.jsx'
+import Carousel from "../src/components/Carousel.jsx";
 
 const findAppartID = (id) => {
     return appartements.find((appartement) => appartement.id === id);
@@ -18,9 +19,10 @@ const Apart = () => {
 
     return (
         <div className="apart">
-           <div className="carousel">
-            
-           </div>
+           <Carousel 
+           source={appartement.pictures}
+           title={appartement.title}
+           />
             <div className="apart-content">
                 
                     <div className="apart-titles">

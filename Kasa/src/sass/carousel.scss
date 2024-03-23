@@ -1,0 +1,38 @@
+.carousel {
+    height: 450px;
+    max-width: 1440px;
+    margin: 0 auto;
+    border-radius: 25px;
+    position: relative;
+    overflow: hidden;
+    .carousel-nav {
+        position: absolute;
+        height: 100%;
+        width: 100%;
+        bottom: 0;
+        display: flex;
+        justify-content: space-between;
+        p{
+            margin: 0;
+            color: white;
+            position: absolute;
+            bottom: 10%;
+        }
+    }
+    .leftArrow,
+    .rightArrow {
+        width: 80px;
+        cursor: pointer;
+    }
+    .leftArrow {
+        transform: rotate(-90deg);
+    }
+    .rightArrow {
+        transform: rotate(90deg);
+    }
+    .carousel-pictures {
+        height: 100%;
+        width: 100%;
+        object-fit: cover;
+    }
+  }

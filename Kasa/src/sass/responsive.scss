@@ -81,6 +81,15 @@
     padding: 0 20px;
     .carousel {
       max-height: 255px;
+      .carousel-nav {
+        img {
+          width: 20px;
+          padding: 10px;
+        }
+        p {
+          display: none;
+        }
+      }
     }
     &-content {
       display: flex;
@@ -88,9 +97,9 @@
       .colapses-about {
         display: flex;
         flex-direction: column;
-        .colapse-description, .colapse-equipment {
+        .colapse-description, 
+        .colapse-equipment {
           width: 100%;
-
         }
       }
     }
